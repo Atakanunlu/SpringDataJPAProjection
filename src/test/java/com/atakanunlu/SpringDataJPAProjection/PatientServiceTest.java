@@ -3,7 +3,9 @@ package com.atakanunlu.SpringDataJPAProjection;
 import com.atakanunlu.SpringDataJPAProjection.dto.BloodGroupStats;
 import com.atakanunlu.SpringDataJPAProjection.dto.CPatientInfo;
 import com.atakanunlu.SpringDataJPAProjection.dto.IPatientInfo;
+import com.atakanunlu.SpringDataJPAProjection.entity.Patient;
 import com.atakanunlu.SpringDataJPAProjection.repository.PatientRepository;
+import com.atakanunlu.SpringDataJPAProjection.service.PatientService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +17,9 @@ public class PatientServiceTest {
 
     @Autowired
     private PatientRepository patientRepository;
+
+    @Autowired
+    private PatientService patientService;
 
     @Test
     public void testPatient(){
@@ -50,9 +55,14 @@ public class PatientServiceTest {
 ///            System.out.println(bloodGroupStats);
 //        }
 
-        int guncelle = patientRepository.updatePatientNameWithId("Atakan Ünlü",1L);
-        System.out.println(guncelle);
+//        int guncelle = patientRepository.updatePatientNameWithId("Atakan Ünlü",1L);
+//        System.out.println(guncelle);
+//
+//
+//        Patient patient = new Patient(); // TRANSIENT
+//        patientRepository.save(patient); // MANAGED(PERSISTENCE) OLDU
 
+        patientService.testPatientTransaction();
 
     }
 
