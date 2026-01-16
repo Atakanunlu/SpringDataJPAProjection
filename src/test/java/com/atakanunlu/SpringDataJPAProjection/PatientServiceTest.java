@@ -47,7 +47,7 @@ public class PatientServiceTest {
 //        List<BloodGroupStats> getBloodGroupStats = patientRepository.getBloodGroupStats();
 //
 //        for (var bloodGroupStats : getBloodGroupStats){
-//            System.out.println(bloodGroupStats);
+///            System.out.println(bloodGroupStats);
 //        }
 
         int guncelle = patientRepository.updatePatientNameWithId("Atakan Ünlü",1L);
