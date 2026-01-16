@@ -37,5 +37,12 @@ public class Patient {
     @CreationTimestamp
     private LocalDateTime createdAt;
 
+    @OneToOne //owning side
+    @JoinColumn(name = "patient_insurance",unique = true)
+    private Insurance insurance;
+
+    @OneToMany //inverse side
+    @JoinColumn(nullable = false)
+    Set<Appointment> appointments = new HashSet<>();
 
 }
