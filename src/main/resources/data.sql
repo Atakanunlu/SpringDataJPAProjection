@@ -7,3 +7,6 @@ VALUES
     ('Burak Şahin', 'MALE', '1993-07-11', 'burak.sahin@example.com', 'O_POSITIVE');
 
 
+INSERT INTO doctor (name,specialization,email)
+VALUES
+    ('Sadettin Saran','FTR','sampiyonfb@gmail.com');

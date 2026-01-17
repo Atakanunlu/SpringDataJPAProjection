@@ -26,12 +26,16 @@ public class Appointment {
     private String reason;
 
 
-    @ManyToOne //owning side
+    @ManyToOne(fetch = FetchType.LAZY) //owning side
+    @ToString.Exclude
     @JoinColumn(nullable = false)
+    @JsonIgnore
     private Patient patient;
 
     @ManyToOne //owning side
     @JoinColumn(nullable = false)
+    @ToString.Exclude
+    @JsonIgnore
     private Doctor doctor;
 
 }
