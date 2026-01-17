@@ -64,6 +64,10 @@ public class PatientServiceTest {
 
         patientService.testPatientTransaction();
 
+
+        List<Patient> patientList = patientRepository.getAllPatientsWithAppointments();
+        patientList.forEach(System.out::println);
+
     }
 
 }

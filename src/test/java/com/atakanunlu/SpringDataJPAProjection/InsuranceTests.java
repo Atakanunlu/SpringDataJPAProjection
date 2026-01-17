@@ -39,7 +39,9 @@ public class InsuranceTests {
         System.out.println(updatedInsurance);
 
 
-       patientService.deletePatient(1L);
+      // patientService.deletePatient(1L);
+
+        insuranceService.removeInsuranceToPatient(1L);
 
     }
 
@@ -57,5 +59,7 @@ public class InsuranceTests {
         patientService.deletePatient(2L);
 
     }
+
+
 
 }
